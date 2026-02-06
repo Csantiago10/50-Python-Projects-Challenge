@@ -6,8 +6,8 @@ Este repositorio contiene mi progreso en el reto de los 50 proyectos de Python, 
 ---
 
 ## 📊 Estado del Reto
-![Progreso](https://geps.dev/progress/2) 
-*(2% completado - 1 de 50)*
+![Progreso](https://geps.dev/progress/4) 
+*(4% completado - 2 de 50)*
 
 ## 📂 Estructura de cada Proyecto
 Cada carpeta dentro de este repositorio sigue el estándar de **Src Layout**:
@@ -23,7 +23,7 @@ El objetivo de esta fase es dominar algoritmos sin librerías externas.
 | # | Proyecto | Conceptos Clave | Estado | Link |
 | :--- | :--- | :--- | :--- | :--- |
 | 01 | **Number Separator** | `input`, `split`, `sort`, `try/except` | ✅ Terminado | [Ver Proyecto](./number_separator) |
-| 02 | **Conversor Universal** | Funciones, `if/elif/else`, `f-strings` | 🏗️ En proceso | [Ver Proyecto](./02_conversor_universal) |
+| 02 | **Conversor Universal** | Funciones, `if/elif/else`, `f-strings` | ✅ Terminado | [Ver Proyecto](./02_conversor_universal) |
 | 03 | **Password Generator** | `random`, `string constants`, `shuffle` | ⏳ Pendiente | - |
 | 04 | **Word Counter** | Diccionarios, manipulación de strings | ⏳ Pendiente | - |
 | 05 | **Rock, Paper, Scissors** | `while True`, lógica booleana | ⏳ Pendiente | - |
@@ -39,4 +39,4 @@ El objetivo de esta fase es dominar algoritmos sin librerías externas.
 
 1. **Clonar el repositorio:**
    ```bash
-   git clone [https://github.com/TU_USUARIO/50_PYTHON_PROJECTS_CHALLENGE.git](https://github.com/TU_USUARIO/50_PYTHON_PROJECTS_CHALLENGE.git)
+   git clone https://github.com/Csantiago10/50-Python-Projects-Challenge.git
