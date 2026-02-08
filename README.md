@@ -6,8 +6,8 @@ Este repositorio contiene mi progreso en el reto de los 50 proyectos de Python, 
 ---
 
 ## 📊 Estado del Reto
-![Progreso](https://geps.dev/progress/4) 
-*(4% completado - 2 de 50)*
+![Progreso](https://geps.dev/progress/6) 
+*(6% completado - 2 de 50)*
 
 ## 📂 Estructura de cada Proyecto
 Cada carpeta dentro de este repositorio sigue el estándar de **Src Layout**:
@@ -24,7 +24,7 @@ El objetivo de esta fase es dominar algoritmos sin librerías externas.
 | :--- | :--- | :--- | :--- | :--- |
 | 01 | **Number Separator** | `input`, `split`, `sort`, `try/except` | ✅ Terminado | [Ver Proyecto](./number_separator) |
 | 02 | **Conversor Universal** | Funciones, `if/elif/else`, `f-strings` | ✅ Terminado | [Ver Proyecto](./02_conversor_universal) |
-| 03 | **Password Generator** | `random`, `string constants`, `shuffle` | ⏳ Pendiente | - |
+| 03 | **Password Generator** | Funciones `random`, `string constants`, `shuffle` | ✅ Terminado | [Ver Proyecto](./03_Password_Generator) |
 | 04 | **Word Counter** | Diccionarios, manipulación de strings | ⏳ Pendiente | - |
 | 05 | **Rock, Paper, Scissors** | `while True`, lógica booleana | ⏳ Pendiente | - |
 | 06 | **Hangman** | Listas mutables, ASCII Art | ⏳ Pendiente | - |
