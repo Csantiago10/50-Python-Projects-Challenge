@@ -1,0 +1,41 @@
+
+INICIO
+
+    # 1. MÓDULO DE LIMPIEZA (Normalización)
+    FUNCION limpiar_texto(texto_sucio):
+        a. Convertir todo "texto_sucio" a MINÚSCULAS.
+        b. Eliminar caracteres que NO sean letras o espacios (puntos, comas, signos).
+           (Pista: Reemplazar puntuación por vacio "" o espacios).
+        c. Dividir el texto en una LISTA de palabras (usando split).
+        d. RETORNAR lista_palabras.
+
+    # 2. MÓDULO DE ANÁLISIS (Conteo)
+    FUNCION contar_frecuencia(lista_palabras):
+        a. Crear diccionario vacío: conteo = {}
+        b. PARA CADA "palabra" EN lista_palabras:
+            SI la palabra YA existe en "conteo":
+                Sumar 1 a su valor actual.
+            SI NO existe:
+                Crearla con valor 1.
+        c. RETORNAR diccionario "conteo".
+
+    # 3. MÓDULO DE ORDENAMIENTO (Ranking)
+    FUNCION obtener_top_3(diccionario_conteo):
+        a. Convertir diccionario en una lista de tuplas [(palabra, cantidad)...].
+        b. ORDENAR la lista de mayor a menor basándose en la CANTIDAD.
+        c. Tomar los primeros 3 elementos.
+        d. RETORNAR top_3.
+
+    # 4. ORQUESTADOR (Main)
+    a. Recibir input del usuario (Párrafo).
+    b. lista_limpia = limpiar_texto(input)
+    c. total_palabras = LONGITUD de lista_limpia.
+    d. diccionario_final = contar_frecuencia(lista_limpia)
+    e. top_3 = obtener_top_3(diccionario_final)
+
+    f. IMPRIMIR:
+       - "Total de palabras: " + total_palabras
+       - "Top 3 palabras más repetidas:" + top_3
+
+FIN
+
