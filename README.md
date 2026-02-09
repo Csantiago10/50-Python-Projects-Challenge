@@ -25,7 +25,7 @@ El objetivo de esta fase es dominar algoritmos sin librerías externas.
 | 01 | **Number Separator** | `input`, `split`, `sort`, `try/except` | ✅ Terminado | [Ver Proyecto](./number_separator) |
 | 02 | **Conversor Universal** | Funciones, `if/elif/else`, `f-strings` | ✅ Terminado | [Ver Proyecto](./02_conversor_universal) |
 | 03 | **Password Generator** | Funciones `random`, `string constants`, `shuffle` | ✅ Terminado | [Ver Proyecto](./03_Password_Generator) |
-| 04 | **Word Counter** | Funciones `string`, `lower`, `maketrans`, `translate`, `list`, `dict`, `sort`, `reverse`  | ✅ Terminado | [Ver Proyecto](./04_Words_Counter) |
+| 04 | **Word Counter** | Funciones `string`, `lower`, `maketrans`, `translate`, `list`, `dict`, `sort`, `reverse`  | ✅ Terminado | [Ver Proyecto](./04_Word_Counter) |
 | 05 | **Rock, Paper, Scissors** | `while True`, lógica booleana | ⏳ Pendiente | - |
 | 06 | **Hangman** | Listas mutables, ASCII Art | ⏳ Pendiente | - |
 | 07 | **César Cipher** | Código ASCII (`ord`, `chr`), módulos | ⏳ Pendiente | - |
