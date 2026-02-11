@@ -6,8 +6,8 @@ Este repositorio contiene mi progreso en el reto de los 50 proyectos de Python, 
 ---
 
 ## 📊 Estado del Reto
-![Progreso](https://geps.dev/progress/8) 
-*(8% completado - 4 de 50)*
+![Progreso](https://geps.dev/progress/10) 
+*(10% completado - 5 de 50)*
 
 ## 📂 Estructura de cada Proyecto
 Cada carpeta dentro de este repositorio sigue el estándar de **Src Layout**:
