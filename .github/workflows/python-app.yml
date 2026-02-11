@@ -1,0 +1,41 @@
+name: Python application
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.10"
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install flake8
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        
+    - name: Lint with flake8
+      run: |
+        # Esto revisa si tienes errores de sintaxis graves
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+        # Esto te avisa si tu código está "feo" (muchos espacios, líneas largas), pero NO falla
+        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+        
+    - name: Test with unittest
+      run: |
+        # Aquí está el cambio clave: Usamos unittest y le decimos que busque en todas las carpetas
+        python -m unittest discover -s . -p "test_*.py"
