@@ -1,0 +1,77 @@
+PROYECTO: Piedra, Papel o Tijera (Best of 3)
+FECHA: 2026-02-11
+AUTOR: santi.automata
+
+INICIO
+
+    # -------------------------------------------------------------------------
+    # MÓDULO 1: LÓGICA DEL JUEGO (src/game_logic.py)
+    # -------------------------------------------------------------------------
+    
+    CONSTANTE REGLAS = {
+        "piedra": "tijera",  # Piedra gana a Tijera
+        "papel": "piedra",   # Papel gana a Piedra
+        "tijera": "papel"    # Tijera gana a Papel
+    }
+
+    FUNCION obtener_ganador(usuario, cpu):
+        a. SI usuario ES IGUAL A cpu:
+            RETORNAR "empate"
+        
+        b. SI REGLAS[usuario] ES IGUAL A cpu:
+            RETORNAR "usuario"  # Gana el jugador porque su elección vence a la CPU
+        
+        c. SINO:
+            RETORNAR "cpu"      # En cualquier otro caso, gana la CPU
+
+    # -------------------------------------------------------------------------
+    # MÓDULO 2: ORQUESTADOR PRINCIPAL (src/main.py)
+    # -------------------------------------------------------------------------
+
+    FUNCION main():
+        # 1. Inicialización de Estado
+        puntos_usuario = 0
+        puntos_cpu = 0
+        meta_victoria = 2  # El primero en llegar a 2 gana
+
+        IMPRIMIR "--- INICIO DEL JUEGO: GANA EL PRIMERO EN LLEGAR A 2 PUNTOS ---"
+
+        # 2. Bucle del Juego (Game Loop)
+        MIENTRAS (puntos_usuario < meta_victoria) Y (puntos_cpu < meta_victoria):
+            
+            # A. Entrada y Validación
+            eleccion_usuario = ""
+            MIENTRAS eleccion_usuario NO ESTÁ EN ["piedra", "papel", "tijera"]:
+                INPUT raw_input ("Elige: Piedra, Papel o Tijera")
+                eleccion_usuario = LIMPIAR_TEXTO(raw_input) # .lower() y .strip()
+                SI eleccion_usuario es inválido:
+                    IMPRIMIR "Error: Opción no válida."
+
+            # B. Turno de la CPU
+            eleccion_cpu = ALEATORIO(["piedra", "papel", "tijera"])
+            IMPRIMIR "CPU eligió: " + eleccion_cpu
+
+            # C. Determinar Ganador de la Ronda
+            resultado = obtener_ganador(eleccion_usuario, eleccion_cpu)
+
+            # D. Actualizar Marcador
+            SI resultado == "usuario":
+                puntos_usuario = puntos_usuario + 1
+                IMPRIMIR "¡Ganaste la ronda!"
+            SINO SI resultado == "cpu":
+                puntos_cpu = puntos_cpu + 1
+                IMPRIMIR "¡La CPU gana la ronda!"
+            SINO:
+                IMPRIMIR "¡Es un empate! Nadie suma puntos."
+
+            # E. Mostrar Marcador en Vivo
+            IMPRIMIR "Marcador: Santiago [puntos_usuario] - [puntos_cpu] CPU"
+            IMPRIMIR "------------------------------------------------------"
+
+        # 3. Fin del Juego
+        SI puntos_usuario == meta_victoria:
+            IMPRIMIR "¡FELICIDADES! HAS GANADO LA PARTIDA."
+        SINO:
+            IMPRIMIR "GAME OVER. LA CPU HA GANADO LA PARTIDA."
+
+FIN
