@@ -6,8 +6,8 @@ Este repositorio contiene mi progreso en el reto de los 50 proyectos de Python, 
 ---
 
 ## 📊 Estado del Reto
-![Progreso](https://geps.dev/progress/10) 
-*(10% completado - 5 de 50)*
+!Progreso 
+*(12% completado - 6 de 50)*
 
 ## 📂 Estructura de cada Proyecto
 Cada carpeta dentro de este repositorio sigue el estándar de **Src Layout**:
@@ -27,7 +27,7 @@ El objetivo de esta fase es dominar algoritmos sin librerías externas.
 | 03 | **Password Generator** | Funciones `random`, `string constants`, `shuffle` | ✅ Terminado | [Ver Proyecto](./03_Password_Generator) |
 | 04 | **Word Counter** | Funciones `string`, `lower`, `maketrans`, `translate`, `list`, `dict`, `sort`, `reverse`  | ✅ Terminado | [Ver Proyecto](./04_Word_Counter) |
 | 05 | **Rock, Paper, Scissors** | `while True`, lógica booleana | ✅ Terminado | [Ver Proyecto](./05_Rock_Paper_Scissors) |
-| 06 | **Hangman** | Listas mutables, ASCII Art | ⏳ Pendiente | - |
+| 06 | **Hangman** | `set`, `list` (mutable), `input`, `unittest` | ✅ Terminado | [Ver Proyecto](./06_Hangman) |
 | 07 | **César Cipher** | Código ASCII (`ord`, `chr`), módulos | ⏳ Pendiente | - |
 | 08 | **To-Do CLI** | File I/O (`.txt`), Persistence | ⏳ Pendiente | - |
 | 09 | **Guess the Number** | Búsqueda Binaria (Binary Search) | ⏳ Pendiente | - |

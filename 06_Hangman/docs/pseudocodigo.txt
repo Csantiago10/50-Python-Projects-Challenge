@@ -1,0 +1,59 @@
+# ---------------------------------------------------------
+# Lógica (src/hangman_logic.py)
+# ---------------------------------------------------------
+
+Función buscar_letra_en_palabra(letra, palabra_secreta, tablero_actual):
+    encontrado = Falso
+    
+    # Recorremos la palabra por índice para encontrar TODAS las apariciones
+    Para cada indice i desde 0 hasta longitud(palabra_secreta):
+        Si palabra_secreta[i] es igual a letra:
+            tablero_actual[i] = letra  # Actualizamos la lista visual
+            encontrado = Verdadero
+            
+    Retornar encontrado, tablero_actual
+
+# ---------------------------------------------------------
+# Menú (src/main.py)
+# ---------------------------------------------------------
+
+Función inicio_juego():
+    mensaje("JUEGO DEL AHORCADO")
+    
+    palabra = elegir_azar(bank_words) 
+    vidas = 6
+    
+    # ARQUITECTURA: Usamos lista para ser mutable
+    # Creamos una lista con tantos guiones como letras tenga la palabra
+    tablero = ["_"] multiplicado por longitud(palabra) 
+    
+    # ARQUITECTURA: Usamos set() para búsqueda O(1)
+    letras_usadas = nuevo Set() 
+
+    mientras (vidas > 0 y "_" existe en tablero):
+        
+        mostrar_tablero(tablero) # Muestra P _ T _ O N
+        letra = input("ingrese una letra").minuscula()
+
+        # 1. Validación: ¿Ya la usó?
+        Si letra en letras_usadas:
+            imprimir("Ya usaste esa letra, no pierdes vidas")
+            continuar (saltar al siguiente ciclo)
+        
+        # Guardar en el set
+        letras_usadas.agregar(letra)
+
+        # 2. Lógica del juego
+        encontrado, tablero = buscar_letra_en_palabra(letra, palabra, tablero)
+
+        Si encontrado es Verdadero:
+            imprimir("¡Bien hecho!")
+        Sino:
+            vidas = vidas - 1
+            imprimir("Fallaste. Te quedan " + vidas + " vidas")
+
+    # Fin del bucle
+    Si vidas > 0:
+        imprimir("¡GANASTE! La palabra era: " + palabra)
+    Sino:
+        imprimir("GAME OVER. La palabra era: " + palabra)
