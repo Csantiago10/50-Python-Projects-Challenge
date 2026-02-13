@@ -7,7 +7,7 @@ Este repositorio contiene mi progreso en el reto de los 50 proyectos de Python, 
 
 ## 📊 Estado del Reto
 !Progreso 
-*(12% completado - 6 de 50)*
+*(14% completado - 7 de 50)*
 
 ## 📂 Estructura de cada Proyecto
 Cada carpeta dentro de este repositorio sigue el estándar de **Src Layout**:
@@ -28,7 +28,7 @@ El objetivo de esta fase es dominar algoritmos sin librerías externas.
 | 04 | **Word Counter** | Funciones `string`, `lower`, `maketrans`, `translate`, `list`, `dict`, `sort`, `reverse`  | ✅ Terminado | [Ver Proyecto](./04_Word_Counter) |
 | 05 | **Rock, Paper, Scissors** | `while True`, lógica booleana | ✅ Terminado | [Ver Proyecto](./05_Rock_Paper_Scissors) |
 | 06 | **Hangman** | `set`, `list` (mutable), `input`, `unittest` | ✅ Terminado | [Ver Proyecto](./06_Hangman) |
-| 07 | **César Cipher** | Código ASCII (`ord`, `chr`), módulos | ⏳ Pendiente | - |
+| 07 | **César Cipher** | Código ASCII (`ord`, `chr`), módulos | ✅ Terminado | [Ver Proyecto](./07_Caesar_Cipher) |
 | 08 | **To-Do CLI** | File I/O (`.txt`), Persistence | ⏳ Pendiente | - |
 | 09 | **Guess the Number** | Búsqueda Binaria (Binary Search) | ⏳ Pendiente | - |
 | 10 | **ATM Simulator** | Diccionarios anidados, Seguridad | ⏳ Pendiente | - |

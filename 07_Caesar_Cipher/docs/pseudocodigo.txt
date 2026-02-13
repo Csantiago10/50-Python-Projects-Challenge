@@ -1,0 +1,73 @@
+PROYECTO: Cifrado César (Caesar Cipher)
+OBJETIVO: Encriptar y desencriptar mensajes desplazando las letras del alfabeto.
+
+===============================================================================
+EXPLICACIÓN DEL CONCEPTO (La Matemática)
+===============================================================================
+Las computadoras ven las letras como números (Código ASCII).
+    'A' = 65 ... 'Z' = 90
+    'a' = 97 ... 'z' = 122
+
+El problema es que si sumas 1 a la 'z' (122 + 1 = 123), obtienes '{', no 'a'.
+Para solucionar esto y hacer que "dé la vuelta", usamos aritmética modular (%).
+
+Fórmula Mágica:
+    1. Normalizar: Convertir la letra a un índice de 0 a 25.
+       (Ej: 'a' -> 0, 'b' -> 1 ... 'z' -> 25)
+       indice = ord(letra) - base_ascii
+
+    2. Desplazar y Rotar:
+       nuevo_indice = (indice + shift) % 26
+       (El % 26 asegura que si llegas a 26, vuelvas a 0).
+
+    3. Recuperar ASCII:
+       nueva_letra = chr(nuevo_indice + base_ascii)
+
+===============================================================================
+MÓDULO 1: LÓGICA DE CIFRADO (src/cipher.py)
+===============================================================================
+
+FUNCION cifrar_caracter(caracter, shift):
+    # 1. Preservar lo que no son letras (espacios, puntos, números)
+    SI caracter NO es letra:
+        RETORNAR caracter (sin cambios)
+
+    # 2. Definir la base según sea Mayúscula o Minúscula
+    SI caracter es Mayúscula:
+        base = 65  # ASCII de 'A'
+    SINO:
+        base = 97  # ASCII de 'a'
+
+    # 3. Aplicar la fórmula
+    indice_original = ord(caracter) - base
+    nuevo_indice = (indice_original + shift) % 26
+    nuevo_ascii = nuevo_indice + base
+    
+    RETORNAR chr(nuevo_ascii)
+
+FUNCION procesar_texto(texto, shift):
+    resultado = ""
+    PARA CADA letra EN texto:
+        nueva_letra = cifrar_caracter(letra, shift)
+        resultado = resultado + nueva_letra
+    RETORNAR resultado
+
+===============================================================================
+MÓDULO 2: INTERFAZ DE USUARIO (src/main.py)
+===============================================================================
+
+FUNCION main():
+    MIENTRAS Verdadero:
+        IMPRIMIR Menú: [1] Encriptar, [2] Desencriptar, [3] Salir
+        opcion = input()
+
+        SI opcion == "3": ROMPER
+
+        mensaje = input("Mensaje: ")
+        shift = input("Desplazamiento: ") (Convertir a entero)
+
+        SI opcion == "1":
+            IMPRIMIR procesar_texto(mensaje, shift)
+        SI opcion == "2":
+            # Truco: Desencriptar es lo mismo que encriptar con shift negativo
+            IMPRIMIR procesar_texto(mensaje, -shift)
