@@ -1,0 +1,59 @@
+CONSTANT DB_FILE = "tasks.txt"
+
+FUNCTION load_tasks():
+    TRY:
+        OPEN DB_FILE in READ mode as file:
+            tasks_list = []
+            FOR each line IN file:
+                clean_line = line.strip()
+                IF clean_line IS NOT empty:
+                    parts = clean_line.split("|")
+                    dictionary = {
+                        "descripcion": parts[0],
+                        "estado": parts[1]
+                    }
+                    APPEND dictionary TO tasks_list
+            RETURN tasks_list
+    EXCEPTION (FileNotFound):
+        RETURN empty_list []
+
+FUNCTION save_tasks(tasks_list):
+    OPEN DB_FILE in WRITE mode as file:
+        FOR each task IN tasks_list:
+            line = f"{task['descripcion']}|{task['estado']}\n"
+            WRITE line TO file
+
+FUNCTION add_task(tasks_list):
+    INPUT description
+    new_task = {"descripcion": description, "estado": "pendiente"}
+    APPEND new_task TO tasks_list
+    CALL save_tasks(tasks_list)
+    PRINT "Task saved"
+
+FUNCTION complete_task(tasks_list):
+    SHOW tasks_list
+    INPUT index
+    IF index IS VALID:
+        tasks_list[index]["estado"] = "completada"
+        CALL save_tasks(tasks_list)
+
+FUNCION main():
+    tasks = CALL load_tasks()
+    
+    WHILE TRUE:
+        SHOW MENU:
+            1. View
+            2. Add
+            3. Complete
+            4. Delete
+            5. Exit
+        
+        INPUT option
+        
+        IF option == 1: SHOW tasks
+        IF option == 2: CALL add_task(tasks)
+        IF option == 3: CALL complete_task(tasks)
+        IF option == 4: CALL delete_task(tasks)
+        IF option == 5: BREAK LOOP
+        
+    PRINT "Goodbye"
