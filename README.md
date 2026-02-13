@@ -29,7 +29,7 @@ El objetivo de esta fase es dominar algoritmos sin librerías externas.
 | 05 | **Rock, Paper, Scissors** | `while True`, lógica booleana | ✅ Terminado | [Ver Proyecto](./05_Rock_Paper_Scissors) |
 | 06 | **Hangman** | `set`, `list` (mutable), `input`, `unittest` | ✅ Terminado | [Ver Proyecto](./06_Hangman) |
 | 07 | **César Cipher** | Código ASCII (`ord`, `chr`), módulos | ✅ Terminado | [Ver Proyecto](./07_Caesar_Cipher) |
-| 08 | **To-Do CLI** | File I/O (`.txt`), Persistence | ✅ Terminado | [Ver Proyecto](./08_TodoList_CLI) |
+| 08 | **To-Do CLI** | File I/O (`.txt`), Persistence | ✅ Terminado | [Ver Proyecto](./08_todoList_CLI) |
 | 09 | **Guess the Number** | Búsqueda Binaria (Binary Search) | ⏳ Pendiente | - |
 | 10 | **ATM Simulator** | Diccionarios anidados, Seguridad | ⏳ Pendiente | - |
 
