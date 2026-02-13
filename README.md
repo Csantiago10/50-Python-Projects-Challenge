@@ -6,8 +6,8 @@ Este repositorio contiene mi progreso en el reto de los 50 proyectos de Python, 
 ---
 
 ## 📊 Estado del Reto
-![Progress](https://progress-bar.dev/14)
-*(14% completado - 7 de 50)*
+![Progress](https://progress-bar.dev/16)
+*(16% completado - 8 de 50)*
 
 ## 📂 Estructura de cada Proyecto
 Cada carpeta dentro de este repositorio sigue el estándar de **Src Layout**:
