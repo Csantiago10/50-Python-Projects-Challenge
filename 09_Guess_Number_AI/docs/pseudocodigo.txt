@@ -1,0 +1,45 @@
+# Pseudocódigo: Adivina el Número (Búsqueda Binaria)
+
+INICIO
+
+    // 1. Inicialización de variables
+    limite_inferior = 1
+    limite_superior = 100
+    respuesta_usuario = ""
+    intentos = 0
+
+    // Mensaje de bienvenida e instrucciones
+    Imprimir "Piensa en un número del 1 al 100."
+    Imprimir "Yo intentaré adivinarlo en 7 intentos o menos."
+    Imprimir "Responde a mis suposiciones con:"
+    Imprimir "  'A' -> si mi número es más ALTO que tu número secreto."
+    Imprimir "  'B' -> si mi número es más BAJO que tu número secreto."
+    Imprimir "  'C' -> si mi suposición es CORRECTA."
+
+    // 2. Bucle principal del juego
+    MIENTRAS respuesta_usuario != "C":
+
+        // 3. Validación de trampa (condición de parada por inconsistencia)
+        SI limite_inferior > limite_superior:
+            Imprimir "¡Estás haciendo trampa! El rango de búsqueda es imposible."
+            TERMINAR
+
+        // 4. Cálculo de la predicción usando Búsqueda Binaria
+        prediccion = (limite_inferior + limite_superior) // 2
+
+        // 5. Interacción con el usuario
+        Leer respuesta_usuario para la prediccion
+
+        // 6. Lógica de actualización de límites
+        SI respuesta_usuario == "A":
+            limite_inferior = prediccion + 1
+        SINO SI respuesta_usuario == "B":
+            limite_superior = prediccion - 1
+        SINO SI respuesta_usuario == "C":
+            Imprimir "¡Lo sabía! He adivinado tu número."
+        SINO:
+            Imprimir "Respuesta no válida. Por favor, usa A, B o C."
+
+    FIN MIENTRAS
+
+FIN
