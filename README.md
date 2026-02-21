@@ -6,8 +6,8 @@ Este repositorio contiene mi progreso en el reto de los 50 proyectos de Python, 
 ---
 
 ## 📊 Estado del Reto
-![Progress](https://progress-bar.dev/18)
-*(18% completado - 9 de 50)*
+![Progress](https://geps.dev/progress/20)
+*(20% completado - 10 de 50)*
 
 ## 📂 Estructura de cada Proyecto
 Cada carpeta dentro de este repositorio sigue el estándar de **Src Layout**:
@@ -31,7 +31,7 @@ El objetivo de esta fase es dominar algoritmos sin librerías externas.
 | 07 | **César Cipher** | Código ASCII (`ord`, `chr`), módulos | ✅ Terminado | [Ver Proyecto](./07_Caesar_Cipher) |
 | 08 | **To-Do CLI** | File I/O (`.txt`), Persistence | ✅ Terminado | [Ver Proyecto](./08_todoList_CLI) |
 | 09 | **Guess the Number** | Búsqueda Binaria (Binary Search) | ✅ Terminado | [Ver Proyecto](./09_Guess_Number_AI) |
-| 10 | **ATM Simulator** | Diccionarios anidados, Seguridad | ⏳ Pendiente | - |
+| 10 | **ATM Simulator** | Hashing (SHA-256), Persistencia de Datos (JSON), y Generación de Archivos (.txt) | ✅ Terminado | [Ver Proyecto](./10_ATM_Simulator) |
 
 ---
 

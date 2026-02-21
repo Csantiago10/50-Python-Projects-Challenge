@@ -3,6 +3,7 @@
 venv/
 env/
 .env
+.venv
 
 # Ignorar archivos compilados de Python (basura automática)
 __pycache__/
@@ -14,3 +15,8 @@ __pycache__/
 
 # Project 08: Ignorar base de datos local
 tasks.txt
+
+# Project 10: Ignorar base de datos local
+.gitignore
+*.txt
+*.json
