@@ -20,7 +20,7 @@ Cada carpeta dentro de este repositorio sigue el estándar de **Src Layout**:
 ## 🛠️ Fase 1: Lógica Pura & Python Core (1-10)
 El objetivo de esta fase es dominar algoritmos sin librerías externas.
 
-| # | Proyecto | Conceptos Clave | Estado | Link |
+| ID | Proyecto | Conceptos Clave | Estado | Link |
 | :--- | :--- | :--- | :--- | :--- |
 | 01 | **Number Separator** | `input`, `split`, `sort`, `try/except` | ✅ Terminado | [Ver Proyecto](./number_separator) |
 | 02 | **Conversor Universal** | Funciones, `if/elif/else`, `f-strings` | ✅ Terminado | [Ver Proyecto](./02_conversor_universal) |
@@ -32,6 +32,26 @@ El objetivo de esta fase es dominar algoritmos sin librerías externas.
 | 08 | **To-Do CLI** | File I/O (`.txt`), Persistence | ✅ Terminado | [Ver Proyecto](./08_todoList_CLI) |
 | 09 | **Guess the Number** | Búsqueda Binaria (Binary Search) | ✅ Terminado | [Ver Proyecto](./09_Guess_Number_AI) |
 | 10 | **ATM Simulator** | Hashing (SHA-256), Persistencia de Datos (JSON), y Generación de Archivos (.txt) | ✅ Terminado | [Ver Proyecto](./10_ATM_Simulator) |
+
+---
+
+## 🚀 FASE 2: EL BACKEND JUNIOR (Django & Web)
+En esta fase, dejamos la consola y construimos aplicaciones web completas usando el patrón MVT (Model-View-Template) y bases de datos relacionales.
+
+| ID | Proyecto | Conceptos Clave | Django | Estado | Link |
+| :-- | :--- | :--- | :--- | :--- | :--- |
+| 11 | **Hello Django (The Monolith)** | `Configuración de entorno`, `settings.py`, `Rutas (urls)`, `Vistas (views)`, `JSON Response`, `Templates,Django`, `HTTP` | Django HTTP | ✅ Terminado | [Ver Proyecto](./11_Hello_Django) |
+| 12 | **Motor de Plantillas (MVT)** | Renderizado de HTML, Jinja Syntax ({% %}), Context Data, Herencia de Plantillas. | Django, HTML | ⏳ Pendiente | ... |
+| 13 | **Archivos Estáticos & CSS** | Manejo de static files, carga de CSS/JS/Imágenes, Diseño básico. | Django, CSS | ⏳ Pendiente | ... |
+| 14 | **Modelos y Bases de Datos (ORM)** | models.py, Migraciones (makemigrations), SQLite, Manipulación de datos sin SQL. | Django ORM, SQL | ⏳ Pendiente | ... |
+| 15 | **El Panel de Administración** | admin.py, Superusuario, Gestión de datos visual, Personalización del Admin. | Django Admin | ⏳ Pendiente | ... |
+| 16 | **Formularios y Peticiones POST** | forms.py, Validación de datos, CSRF Token, Seguridad en inputs, HTTP Verbs. | Django Forms | ⏳ Pendiente | ... |
+| 17 | **CRUD Web I: Read & Create** | Creación de una "App de Notas". Listar datos de la DB y crear nuevos registros desde la web. | Django CRUD | ⏳ Pendiente | ... |
+| 18 | **CRUD Web II: Update & Delete** | Rutas dinámicas (<int:id>), get_object_or_404, Edición y Borrado seguro. | Django CRUD | ⏳ Pendiente | ... |
+| 19 | **Sistema de Autenticación** | Login, Logout, Registro de Usuarios, Decoradores (@login_required), Sesiones. | Django Auth | ⏳ Pendiente | ... |
+| 20 | **Deploy a Producción (La Nube)** | Variables de entorno (.env), Gunicorn, WhiteNoise, Despliegue en Render/Railway. | Cloud, Gunicorn | ⏳ Pendiente | ... |
+
+
 
 ---
 
