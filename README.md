@@ -41,8 +41,8 @@ En esta fase, dejamos la consola y construimos aplicaciones web completas usando
 | ID | Proyecto | Conceptos Clave | Django | Estado | Link |
 | :-- | :--- | :--- | :--- | :--- | :--- |
 | 11 | **Hello Django (The Monolith)** | `Configuración de entorno`, `settings.py`, `Rutas (urls)`, `Vistas (views)`, `JSON Response`, `Templates,Django`, `HTTP` | Django HTTP | ✅ Terminado | [Ver Proyecto](./11_Hello_Django) |
-| 12 | **Motor de Plantillas (MVT)** | Renderizado de HTML, Jinja Syntax ({% %}), Context Data, Herencia de Plantillas. | Django, HTML | ⏳ Pendiente | ... |
-| 13 | **Archivos Estáticos & CSS** | Manejo de static files, carga de CSS/JS/Imágenes, Diseño básico. | Django, CSS | ⏳ Pendiente | ... |
+| 12 | **Motor de Plantillas (MVT)** | `Renderizado de HTML`, `Jinja Syntax ({% %})`, `Context Data, Herencia de Plantillas` | Django, HTML | ✅ Terminado | [Ver Proyecto](./11_Hello_Django) |
+| 13 | **Archivos Estáticos & CSS** | `Manejo de static files`, `carga de CSS/JS/Imágenes`, `Diseño básico` | Django, CSS | ✅ Terminado | [Ver Proyecto](./11_Hello_Django) |
 | 14 | **Modelos y Bases de Datos (ORM)** | models.py, Migraciones (makemigrations), SQLite, Manipulación de datos sin SQL. | Django ORM, SQL | ⏳ Pendiente | ... |
 | 15 | **El Panel de Administración** | admin.py, Superusuario, Gestión de datos visual, Personalización del Admin. | Django Admin | ⏳ Pendiente | ... |
 | 16 | **Formularios y Peticiones POST** | forms.py, Validación de datos, CSRF Token, Seguridad en inputs, HTTP Verbs. | Django Forms | ⏳ Pendiente | ... |

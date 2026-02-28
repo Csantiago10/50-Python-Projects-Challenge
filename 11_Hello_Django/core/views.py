@@ -1,10 +1,22 @@
-from django.http import JsonResponse
+from django.shortcuts import render
+
 
 # Create your views here.
-def hello_world(request):
+def user_profile(request):
     """Return jsonresponse"""
-    data = {
-        "mensage": "Bienvenido al Monolito, Santiago"
-        }
-    
-    return JsonResponse(data)
+    # 1. Create a database.
+    context = {
+        'name': 'Santiago Noreña',
+        'role': 'Backend Developer in Training',
+        'skills': [
+            'Python',
+            'Django',
+            'Flet',
+            'HTML',
+            'CSS',
+            'Git',
+        ]
+    }
+        
+    # 2. Render the template with the context (request, template, context).
+    return render(request, 'core/profile.html', context)
