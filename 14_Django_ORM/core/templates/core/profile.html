@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'core/main.css' %}">
+    <link rel="stylesheet" href="{% static 'core/card.css' %}">
+    
+    <title>Perfil de Usuario</title>
+</head>
+<body>
+    <div class="profile-wrapper">     
+        {% for profile in profiles %}   
+            <div class="card-container">
+                
+                <div class="card-container-two"> 
+                    <div class="card-front">  
+                        <!-- Variable simple -->
+                        <h1>Perfil de {{ profile.name }}</h1>
+                        
+                        <p>Rol: <strong>{{ profile.role }}</strong></p>
+                    </div> 
+                    <div class="card-back">
+                        <h3>Habilidades Técnicas:</h3>
+                        <ul>
+                            <!-- Bucle For en HTML (Poder de Django) -->
+                            {% for skill in profile.get_skills_list %}
+                                <li>{{ skill }}</li>
+                            {% empty %}
+                                <li>No hay habilidades registradas.</li>
+                            {% endfor %}
+                        </ul>
+                        <div class="card-footer">
+                        <p><em>Generado dinámicamente con Django</em></p>
+                        </div>
+                    </div>
+                    
+                </div>   
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
