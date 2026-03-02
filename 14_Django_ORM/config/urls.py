@@ -16,9 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from core.views import user_profile
+from core.views import user_profile, create_profile, edit_profile, delete_profile
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('perfil/', user_profile),
+    path('perfil/', user_profile, name='profile_list'),
+    path('perfil/crear/', create_profile, name='profile_create'),
+    path('perfil/editar/<int:profile_id>/', edit_profile, name='profile_update'),
+    path('perfil/borrar/<int:profile_id>/', delete_profile, name='profile_delete'),
+
 ]

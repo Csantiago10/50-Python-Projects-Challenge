@@ -7,19 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'core/main.css' %}">
     <link rel="stylesheet" href="{% static 'core/card.css' %}">
+    <link rel="stylesheet" href="{% static 'core/buttons.css' %}">
     
     <title>Perfil de Usuario</title>
 </head>
 <body>
+    <div class="btn-container">
+        <button class="btn"><a href="{% url 'profile_create' %}">Crear Perfil</a></button>
+    </div>
     <div class="profile-wrapper">     
-        {% for profile in profiles %}   
+        {% for profile in profiles %}
+        <div class="profile-card-wrapper">
             <div class="card-container">
-                
                 <div class="card-container-two"> 
                     <div class="card-front">  
                         <!-- Variable simple -->
                         <h1>Perfil de {{ profile.name }}</h1>
-                        
                         <p>Rol: <strong>{{ profile.role }}</strong></p>
                     </div> 
                     <div class="card-back">
@@ -32,13 +35,17 @@
                                 <li>No hay habilidades registradas.</li>
                             {% endfor %}
                         </ul>
-                        <div class="card-footer">
+                        <div class="card-framework">
                         <p><em>Generado dinámicamente con Django</em></p>
                         </div>
                     </div>
-                    
+                </div>
+                <div class="card-footer">
+                    <button class="btn"><a href="{% url 'profile_update' profile.id %}">Editar</a></button>
+                    <button class="btn"><a href="{% url 'profile_delete' profile.id %}">Eliminar</a></button>
                 </div>   
             </div>
+        </div>
         {% endfor %}
     </div>
 </body>
