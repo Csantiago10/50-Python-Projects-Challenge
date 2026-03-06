@@ -1,0 +1,24 @@
+.header-container
+{
+    margin: 0;
+    padding: 0
+}
+
+.header-nav
+{
+    position: relative;
+    user-select: none;
+    padding: 4px 8px;
+    border: 1px solid #a9bfd6;
+    box-shadow: inset 0px 0px 0px 1px #a9c5d3;
+    border-radius: 0px;
+    background: linear-gradient(#fcfdfe, #e7f1fb 50%, #dce6f4 50%, #dde9f7);
+    isolation: isolate;
+
+}
+
+.nav-user span
+{
+    color: rgb(243, 135, 86);
+    font-weight: bold;
+}

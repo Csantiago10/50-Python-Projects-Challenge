@@ -6,8 +6,8 @@ Este repositorio contiene mi progreso en el reto de los 50 proyectos de Python, 
 ---
 
 ## 📊 Estado del Reto
-![Progress](https://geps.dev/progress/34)
-*(34% completado - 17 de 50)*
+![Progress](https://geps.dev/progress/40)
+*(40% completado - 20 de 50)*
 
 ## 📂 Estructura de cada Proyecto
 Cada carpeta dentro de este repositorio sigue el estándar de **Src Layout**:
@@ -47,9 +47,9 @@ En esta fase, dejamos la consola y construimos aplicaciones web completas usando
 | 15 | **El Panel de Administración** | `admin.py`, `Superusuario`, `Gestión de datos visual`, `Personalización del Admin`. | Django Admin | ✅ Terminado | [Ver Proyecto](./14_Django_ORM) |
 | 16 | **Formularios y Peticiones POST** | `forms.py`, `Validación de datos`, `CSRF Token`, `Seguridad en inputs`, `HTTP Verbs.` | Django Forms | ✅ Terminado | [Ver Proyecto](./14_Django_ORM) |
 | 17 | **CRUD Web I: Read & Create** | `Creación de una "App de Notas".` `Listar datos de la DB`  `crear nuevos registros desde la web` | Django CRUD | ✅ Terminado | [Ver Proyecto](./14_Django_ORM) |
-| 18 | **CRUD Web II: Update & Delete** | Rutas dinámicas (<int:id>), get_object_or_404, Edición y Borrado seguro. | Django CRUD | ⏳ Pendiente | ... |
-| 19 | **Sistema de Autenticación** | Login, Logout, Registro de Usuarios, Decoradores (@login_required), Sesiones. | Django Auth | ⏳ Pendiente | ... |
-| 20 | **Deploy a Producción (La Nube)** | Variables de entorno (.env), Gunicorn, WhiteNoise, Despliegue en Render/Railway. | Cloud, Gunicorn | ⏳ Pendiente | ... |
+| 18 | **CRUD Web II: Update & Delete** | `Rutas dinámicas (<int:id>)`, `get_object_or_404`, `Edición y Borrado seguro` | Django CRUD | ✅ Terminado | [Ver Proyecto](./14_Django_ORM) |
+| 19 | **Sistema de Autenticación** | `Login`, `Logout`, `Registro de Usuarios`, `Decoradores (@login_required)`, `Sesiones`| Django Auth | ✅ Terminado | [Ver Proyecto](./14_Django_ORM) |
+| 20 | **Deploy a Producción (La Nube)** | `Gunicorn (Servidor WSGI)`, `WhiteNoise (archivos estáticos)`, `Variables de entorno`, `DEBUG=False` | Cloud, CI/CD | ✅ Terminado | [Ver Proyecto](./14_Django_ORM) |
 
 
 

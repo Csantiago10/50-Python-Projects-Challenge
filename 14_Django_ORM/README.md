@@ -61,6 +61,47 @@ Los cambios implementados fueron:
     -   Al confirmar, el perfil se elimina de la base de datos y se redirige al usuario a la página principal.
 4.  **Ajustes de Estilos:** Se realizaron ajustes en los archivos CSS (`card.css` y `buttons.css`) para integrar los nuevos botones de manera estética y funcional dentro de cada tarjeta, asegurando que el diseño se mantenga coherente y adaptable.
 
+## Proyecto 18 y 19: Autenticación y Seguridad (Login, Logout, Registro)
+
+Este proyecto se centra en la implementación de un sistema robusto de autenticación y gestión de sesiones para una aplicación web utilizando Django. Cubre las funcionalidades esenciales que permiten a los usuarios registrarse, iniciar sesión y cerrar sesión de forma segura.
+
+## Proyecto 20: Configuración para producción.
+
+Este proyecto documenta el proceso fundamental de llevar una aplicación Django desde el entorno de desarrollo local a un servidor de producción real, listo para ser accedido por usuarios en la web. Es un paso crítico que transforma un proyecto de prueba en una aplicación web funcional y segura.
+
+### ¿Por qué no usar `runserver` en producción?
+El servidor de desarrollo (`manage.py runserver`) es intencionalmente simple, inseguro y poco eficiente. No está diseñado para manejar tráfico real. Para producción, se necesita una configuración más robusta.
+
+### Componentes Clave de la Configuración:
+
+*   **Servidor de Aplicación WSGI (Gunicorn):** Es un servidor HTTP de Python robusto y probado en batalla. Actúa como intermediario entre un servidor web más general (como Nginx) y nuestra aplicación Django, reemplazando al `runserver`.
+    
+*   **Manejo de Archivos Estáticos (WhiteNoise):** En producción, Django no sirve archivos estáticos (CSS, JS, imágenes) por defecto. `WhiteNoise` es una solución simple y popular que permite a la aplicación servir sus propios archivos estáticos de manera eficiente, sin necesidad de configurar un servidor web aparte para ello.
+
+*   **Variables de Entorno:** Para la seguridad, los datos sensibles como la `SECRET_KEY`, las credenciales de la base de datos o las claves de APIs no deben estar escritos directamente en el código (`settings.py`). Se configuran como variables en el entorno del servidor y la aplicación las lee desde allí.
+
+*   **Ajustes de Seguridad en `settings.py`:**
+    *   `DEBUG = False`: Es **crucial** poner esta variable en `False`. En modo `DEBUG`, Django expone páginas de error detalladas que pueden filtrar información muy sensible sobre la configuración del proyecto.
+    *   `ALLOWED_HOSTS`: Se debe configurar con el dominio o la dirección IP del servidor para prevenir ataques de "HTTP Host header".
+
+### Resultado Final
+Al completar esta configuración, la aplicación Django está lista para ser desplegada en cualquier plataforma de hosting moderna (como Vercel, Railway, Heroku, DigitalOcean, etc.), garantizando que sea segura, escalable y eficiente.
+
+
+
+### Características Principales
+
+*   **Registro de Usuarios:** Creación de un formulario y una vista que permite a los nuevos usuarios registrarse en la plataforma. Los datos se validan y se almacenan de forma segura.
+*   **Inicio de Sesión (Login):** Implementación de un formulario de inicio de sesión que autentica a los usuarios contra la base de datos. Se utiliza el sistema de autenticación incorporado de Django para gestionar las sesiones.
+*   **Cierre de Sesión (Logout):** Una funcionalidad para que los usuarios puedan cerrar su sesión de forma segura, limpiando los datos de la sesión del servidor y del cliente.
+*   **Vistas Protegidas:** Demostración de cómo restringir el acceso a ciertas páginas o vistas solo a usuarios que han iniciado sesión.
+*   **Gestión de Contraseñas:** Django se encarga automáticamente del hash de contraseñas para garantizar que no se almacenen en texto plano, proporcionando una capa fundamental de seguridad.
+*   **Integración con el Admin de Django:** Los usuarios creados son visibles y gestionables a través del panel de administración de Django.
+
+Este proyecto es fundamental para cualquier aplicación web que requiera gestionar cuentas de usuario y proteger contenido.
+
+ 
+ 
 ## Tecnologías Utilizadas
 
 -   **Python:** Lenguaje de programación principal.

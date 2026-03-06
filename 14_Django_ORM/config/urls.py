@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from core.views import user_profile, create_profile, edit_profile, delete_profile
+from django.contrib.auth import views as auth_views
 
 
 
@@ -26,5 +27,7 @@ urlpatterns = [
     path('perfil/crear/', create_profile, name='profile_create'),
     path('perfil/editar/<int:profile_id>/', edit_profile, name='profile_update'),
     path('perfil/borrar/<int:profile_id>/', delete_profile, name='profile_delete'),
+    path('accounts/login/', auth_views.LoginView.as_view(), name='login'),
+    path('accounts/logout/', auth_views.LogoutView.as_view(next_page='profile_list'), name='logout'),
 
 ]

@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from core.models import Profile
 from .forms import ProfileForm
+from django.contrib.auth.decorators import login_required
 
 
 # Create your views here.
@@ -14,7 +15,7 @@ def user_profile(request):
 
     return render(request, 'core/profile.html', context)
 
-
+@login_required # If the user is not logged in, redirect to the login page
 def create_profile(request):
 
     if request.method == 'POST':
@@ -29,6 +30,7 @@ def create_profile(request):
     # render the template with the form included (request, template, context)
     return render(request, 'core/create_profile.html', {'form': form})
 
+@login_required # If the user is not logged in, redirect to the login page
 def edit_profile(request, profile_id):
     # 1. Search for the profile, if it doesn't exist, return a 404
     profile = get_object_or_404(Profile, id=profile_id)
@@ -47,8 +49,9 @@ def edit_profile(request, profile_id):
     # 4. Render the template with the form included
     return render(request, 'core/create_profile.html', {'form': form})
 
-
+@login_required # If the user is not logged in, redirect to the login page
 def delete_profile(request, profile_id):
     profile = get_object_or_404(Profile, id=profile_id)
-    profile.delete()
+    if request.method == "POST":
+        profile.delete()
     return redirect('profile_list')

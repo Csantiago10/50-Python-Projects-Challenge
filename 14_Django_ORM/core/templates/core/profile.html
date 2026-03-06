@@ -12,9 +12,31 @@
     <title>Perfil de Usuario</title>
 </head>
 <body>
-    <div class="btn-container">
-        <button class="btn"><a href="{% url 'profile_create' %}">Crear Perfil</a></button>
-    </div>
+    <header class="header-container">
+        <nav class="header-nav">
+            {% if user.is_authenticated %}
+                <div class="nav-user">
+                    <span>Hola, {{ user.username }}</span>
+                </div>
+                <div>
+                    <form action="{% url 'logout' %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="btn">Cerrar Sesión</button>
+                    </form>
+                </div>
+            {% else %}
+                <div>
+                    <a href="{% url 'login' %}" class="btn">Iniciar Sesión</a>
+                </div>
+            {% endif %}
+        </nav>
+    </header>
+    
+    {% if user.is_authenticated %}
+        <div class="btn-container">
+            <a href="{% url 'profile_create' %}" class="btn">Crear Perfil</a>
+        </div>
+    {% endif %}
     <div class="profile-wrapper">     
         {% for profile in profiles %}
         <div class="profile-card-wrapper">
@@ -40,10 +62,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-footer">
-                    <button class="btn"><a href="{% url 'profile_update' profile.id %}">Editar</a></button>
-                    <button class="btn"><a href="{% url 'profile_delete' profile.id %}">Eliminar</a></button>
-                </div>   
+                {% if user.is_authenticated %}    
+                    <div class="card-footer">
+                        <a href="{% url 'profile_update' profile.id %}" class="btn">Editar</a>
+                        <form action="{% url 'profile_delete' profile.id %}" method="post" style="display: inline;">
+                            {% csrf_token %}
+                            <button type="submit" class="btn">Eliminar</button>
+                        </form>
+                    </div>
+                {% endif %}   
             </div>
         </div>
         {% endfor %}

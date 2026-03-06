@@ -20,3 +20,5 @@ tasks.txt
 .gitignore
 *.txt
 *.json
+
+db.sqlite3
