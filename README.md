@@ -57,7 +57,7 @@ En esta fase  tu herramienta principal será Django REST Framework (DRF). Vas a 
 
 | ID | Proyecto | Conceptos Clave | Estado | Link |
 | :--- | :--- | :--- | :--- | :--- |
-| 21 | **Headless Blog API** | `Intro a DRF`, `Serializers`, `APIViews`, `Endpoints CRUD en formato JSON` | ⏳ Pendiente | [Ver Proyecto](./21_Headless_Blog_API) |
+| 21 | **Headless Blog API** | `Intro a DRF`, `Serializers`, `APIViews`, `Endpoints CRUD en formato JSON` | ✅ Terminado | [Ver Proyecto](./21_Blog_API) |
 | 22 | **Auth Service (JWT)** | `JSON Web Tokens (SimpleJWT)`, `Login/Register API`, `Permisos (IsAuthenticated)` | ⏳ Pendiente | ... |
 | 23 | **E-commerce Inventory API** |	`Bases de datos relacionales (One-to-Many, Many-to-Many)`, `Filtros y Búsquedas complejas` |	⏳ Pendiente | ... |
 | 24 | **News Aggregator API** |	`Web Scraping (BeautifulSoup)`, `integraciones externas`, `guardar datos extraídos en DB` |	⏳ Pendiente | ... |
