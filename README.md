@@ -6,8 +6,8 @@ Este repositorio contiene mi progreso en el reto de los 50 proyectos de Python, 
 ---
 
 ## 📊 Estado del Reto
-![Progress](https://geps.dev/progress/40)
-*(40% completado - 20 de 50)*
+![Progress](https://geps.dev/progress/42)
+*(42% completado - 21 de 50)*
 
 ## 📂 Estructura de cada Proyecto
 Cada carpeta dentro de este repositorio sigue el estándar de **Src Layout**:
@@ -51,6 +51,22 @@ En esta fase, dejamos la consola y construimos aplicaciones web completas usando
 | 19 | **Sistema de Autenticación** | `Login`, `Logout`, `Registro de Usuarios`, `Decoradores (@login_required)`, `Sesiones`| Django Auth | ✅ Terminado | [Ver Proyecto](./14_Django_ORM) |
 | 20 | **Deploy a Producción (La Nube)** | `Gunicorn (Servidor WSGI)`, `WhiteNoise (archivos estáticos)`, `Variables de entorno`, `DEBUG=False` | Cloud, CI/CD | ✅ Terminado | [Ver Proyecto](./14_Django_ORM) |
 
+
+## 🚀 FASE 3: EL ARQUITECTO API (Django REST Framework Mastery)
+En esta fase  tu herramienta principal será Django REST Framework (DRF). Vas a construir los "motores invisibles" que alimentan aplicaciones móviles y webs. Y sí, cada proyecto será una aplicación completa y funcional (Un MVP real).
+
+| ID | Proyecto | Conceptos Clave | Estado | Link |
+| :--- | :--- | :--- | :--- | :--- |
+| 21 | **Headless Blog API** | `Intro a DRF`, `Serializers`, `APIViews`, `Endpoints CRUD en formato JSON` | ⏳ Pendiente | [Ver Proyecto](./21_Headless_Blog_API) |
+| 22 | **Auth Service (JWT)** | `JSON Web Tokens (SimpleJWT)`, `Login/Register API`, `Permisos (IsAuthenticated)` | ⏳ Pendiente | ... |
+| 23 | **E-commerce Inventory API** |	`Bases de datos relacionales (One-to-Many, Many-to-Many)`, `Filtros y Búsquedas complejas` |	⏳ Pendiente | ... |
+| 24 | **News Aggregator API** |	`Web Scraping (BeautifulSoup)`, `integraciones externas`, `guardar datos extraídos en DB` |	⏳ Pendiente | ... |
+| 25 | **Instagram-lite Backend** |	`Manejo de subida de archivos (Multipart/form-data)`, `procesamiento de imágenes (Pillow)` |	⏳ Pendiente |... |
+| 26 | **Weather & Crypto Proxy API** |	`Consumo de APIs externas con requests`, `manejo de Caché para no saturar límites` |	⏳ Pendiente | ... |
+| 27 | **Booking System API (Citas)** |	`Lógica de Fechas y Horas (datetime)`, `validación de superposición de turnos` |	⏳ Pendiente | ... |
+| 28 | **Twitter Clone Backend** |	`Lógica de Seguidores (Followers/Following)`, `Feeds personalizados`, `permisos a nivel de objeto` |	⏳ Pendiente | ... |
+| 29 | **Stripe Webhooks Simulator** |	`Recibir peticiones de terceros (Webhooks)`, `actualizar estados de pago de forma segura` |	⏳ Pendiente | ... |
+| 30 | **URL Shortener Micro-SaaS** |	`Proyecto Full-Stack API` `Redirecciones HTTP`, `analítica de clics`, `Deploy en PostgreSQL`	|⏳ Pendiente | ... |
 
 
 ---
