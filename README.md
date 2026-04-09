@@ -6,8 +6,8 @@ Este repositorio contiene mi progreso en el reto de los 50 proyectos de Python, 
 ---
 
 ## 📊 Estado del Reto
-![Progress](https://geps.dev/progress/42)
-*(42% completado - 21 de 50)*
+![Progress](https://geps.dev/progress/46)
+*(46% completado - 23 de 50)*
 
 ## 📂 Estructura de cada Proyecto
 Cada carpeta dentro de este repositorio sigue el estándar de **Src Layout**:
@@ -58,8 +58,8 @@ En esta fase  tu herramienta principal será Django REST Framework (DRF). Vas a 
 | ID | Proyecto | Conceptos Clave | Estado | Link |
 | :--- | :--- | :--- | :--- | :--- |
 | 21 | **Headless Blog API** | `Intro a DRF`, `Serializers`, `APIViews`, `Endpoints CRUD en formato JSON` | ✅ Terminado | [Ver Proyecto](./21_Blog_API) |
-| 22 | **Auth Service (JWT)** | `JSON Web Tokens (SimpleJWT)`, `Login/Register API`, `Permisos (IsAuthenticated)` | ⏳ Pendiente | ... |
-| 23 | **E-commerce Inventory API** |	`Bases de datos relacionales (One-to-Many, Many-to-Many)`, `Filtros y Búsquedas complejas` |	⏳ Pendiente | ... |
+| 22 | **Auth Service (JWT)** | `JSON Web Tokens (SimpleJWT)`, `Login/Register API`, `Permisos (IsAuthenticated)` | ✅ Terminado | [Ver Proyecto](./22_Auth_Service_JWT). |
+| 23 | **E-commerce Inventory API** |	`Bases de datos relacionales (One-to-Many, Many-to-Many)`, `Filtros y Búsquedas complejas` |	✅ Terminado | [Ver Proyecto](./23_Ecommerce_API) |
 | 24 | **News Aggregator API** |	`Web Scraping (BeautifulSoup)`, `integraciones externas`, `guardar datos extraídos en DB` |	⏳ Pendiente | ... |
 | 25 | **Instagram-lite Backend** |	`Manejo de subida de archivos (Multipart/form-data)`, `procesamiento de imágenes (Pillow)` |	⏳ Pendiente |... |
 | 26 | **Weather & Crypto Proxy API** |	`Consumo de APIs externas con requests`, `manejo de Caché para no saturar límites` |	⏳ Pendiente | ... |
